@@ -1,0 +1,6 @@
+curl -sS https://api.github.com/repos/Alikhan808/expressBookReviews | node -pe "JSON.stringify((r=>({repository:r.full_name,fork:r.fork,parent:r.parent.full_name}))(JSON.parse(require('fs').readFileSync(0,'utf8'))),null,2)"
+{
+  "repository": "Alikhan808/expressBookReviews",
+  "fork": true,
+  "parent": "ibm-developer-skills-network/expressBookReviews"
+}

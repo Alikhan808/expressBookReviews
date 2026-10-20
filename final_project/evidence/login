@@ -1,0 +1,5 @@
+curl -sS -X POST "http://127.0.0.1:5000/customer/login" -H "Content-Type: application/json" -d '{"username":"alikhan_demo","password":"DemoBookPass123"}' -c cookies.txt
+{
+  "message": "Customer successfully logged in.",
+  "username": "alikhan_demo"
+}

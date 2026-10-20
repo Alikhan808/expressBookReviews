@@ -1,0 +1,20 @@
+curl -sS -X PUT "http://127.0.0.1:5000/customer/auth/review/1" -H "Content-Type: application/json" -d '{"review":"A powerful and thought-provoking novel."}' -b cookies.txt
+{
+  "message": "Book review successfully added.",
+  "reviews": {
+    "alikhan_demo": "A powerful and thought-provoking novel."
+  }
+}
+
+curl -sS -X PUT "http://127.0.0.1:5000/customer/auth/review/1" -H "Content-Type: application/json" -d '{"review":"An excellent novel with memorable characters and important cultural themes."}' -b cookies.txt
+{
+  "message": "Book review successfully updated.",
+  "reviews": {
+    "alikhan_demo": "An excellent novel with memorable characters and important cultural themes."
+  }
+}
+
+curl -sS "http://127.0.0.1:5000/review/1"
+{
+  "alikhan_demo": "An excellent novel with memorable characters and important cultural themes."
+}
